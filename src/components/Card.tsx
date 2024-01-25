@@ -1,12 +1,11 @@
+// Карточка
 import { FC } from "react";
-import CardProps from "./type/CardProps";
+import CardWithChildrenProps from "./type/CardWithChildrenProps";
 
-// карточка товара
-const Card: FC<CardProps> = (props) => {
+const Card: FC<CardWithChildrenProps> = (props) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
-      {props.img && <img src={props.img} className="card-img-top" alt="..." />}
-
+      {props.children}
       <div className="card-body">
         <h5 className="card-title">{props.h}</h5>
         <p className="card-text">{props.text}</p>
