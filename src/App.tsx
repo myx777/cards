@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Card from "./components/Card";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Card
+        img="https://picsum.photos/200/300"
+        h="lorem ipsum"
+        text="lorem ipsum lorem ipsum lorem ipsum"
+        buttonlink={{
+          text: "Go Somewhere",
+          link: "https://www.google.com/search?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0+%D1%85%D0%B0%D0%BC%D0%B5%D0%BB%D0%B8%D0%BE%D0%BD%D0%B0&ie=UTF-8#vhid=RGPUWJAiwN3BxM&vssid=l",
+        }}
+      />
+      <Card
+        h="lorem"
+        text="jhjhgjhvjhvjhvm"
+        buttonlink={{
+          text: "kjbkjvbjkb",
+          link: "https://www.google.com/search?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0+%D1%85%D0%B0%D0%BC%D0%B5%D0%BB%D0%B8%D0%BE%D0%BD%D0%B0&ie=UTF-8#vhid=RGPUWJAiwN3BxM&vssid=l",
+        }}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
